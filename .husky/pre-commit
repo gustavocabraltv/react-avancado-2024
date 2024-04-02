@@ -1,1 +1,3 @@
-npx --no-install lint-stage
+. "$(dirname -- "$0")/_/husky.sh"
+
+npx --no-install lint-staged
