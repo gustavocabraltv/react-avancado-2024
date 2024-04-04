@@ -11,3 +11,10 @@ export default {
 } as Meta
 
 export const Default: StoryObj = {}
+
+export const Historia01: StoryObj = {
+  args: {
+    title: 'História 1',
+    description: 'Descrição 1'
+  }
+}

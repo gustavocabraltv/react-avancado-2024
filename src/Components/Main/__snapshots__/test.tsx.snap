@@ -14,11 +14,20 @@ exports[`<Main /> should render the heading 1`] = `
   justify-content: center;
 }
 
+.c1 {
+  color: lightblue;
+}
+
 <main
   class="c0"
 >
   <h1>
     React Avançado
   </h1>
+  <p
+    class="c1"
+  >
+    Descrição
+  </p>
 </main>
 `;

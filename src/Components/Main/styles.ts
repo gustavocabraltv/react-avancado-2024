@@ -14,3 +14,7 @@ export const Wrapper = styled.main`
   align-items: center;
   justify-content: center;
 `
+
+export const Description = styled.p`
+  color: lightblue;
+`
