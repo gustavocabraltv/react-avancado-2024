@@ -14,15 +14,18 @@ const wrapperModifiers = {
   `,
   hideonmobile: () => css`
     ${media.lessThan('medium')`
-
-    width: 5.8rem;
-    height: 4.5rem;
-    svg{
+     
+      width: 5.8rem;
       height: 4.5rem;
-    }
-    .text {
-      display: none;
-    }
+      
+      svg {
+        height: 4.5rem;
+        pointer-events: none;
+      }
+
+      .text {
+        display: none;
+      }
     `}
   `
 }
@@ -31,7 +34,7 @@ export const Wrapper = styled.div<LogoProps>`
   ${({ theme, color, size, hideonmobile }) => css`
     color: ${theme.colors[color!]};
 
-    ${!!size && wrapperModifiers[size]}
-    ${!!hideonmobile && wrapperModifiers.hideonmobile}
+    ${!!size && wrapperModifiers[size]};
+    ${!!hideonmobile && wrapperModifiers.hideonmobile};
   `}
 `
