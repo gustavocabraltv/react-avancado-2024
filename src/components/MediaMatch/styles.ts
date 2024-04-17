@@ -1,2 +1,28 @@
-import styled from 'styled-components'
-export const Wrapper = styled.main``
+import styled, { css } from 'styled-components'
+import media, { DefaultBreakpoints } from 'styled-media-query'
+
+type breakpoint = keyof DefaultBreakpoints
+
+export type MediaMatchProps = {
+  lessThan?: breakpoint
+  greaterThan?: breakpoint
+  children?: React.ReactNode
+}
+
+const mediaMatchModifiers = {
+  lessThan: (size: breakpoint) => css`
+    ${media.lessThan(size)` display: block `}
+  `,
+
+  greaterThan: (size: breakpoint) => css`
+    ${media.greaterThan(size)` display: block `}
+  `
+}
+
+export const MediaMatchContainer = styled.div<MediaMatchProps>`
+  ${({ lessThan, greaterThan }) => css`
+    display: none;
+    ${!!lessThan && mediaMatchModifiers.lessThan(lessThan)}
+    ${!!greaterThan && mediaMatchModifiers.greaterThan(greaterThan)}
+  `}
+`

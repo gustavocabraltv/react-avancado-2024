@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook'
+import { Story, Meta } from 'storybook'
 import MediaMatch from '.'
 
 export default {
