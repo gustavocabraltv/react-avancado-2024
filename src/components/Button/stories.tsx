@@ -11,4 +11,8 @@ export default {
   }
 } as Meta
 
-export const Default: StoryObj = {}
+export const Default: StoryObj = {
+  args: {
+    children: 'Buy Now'
+  }
+}
