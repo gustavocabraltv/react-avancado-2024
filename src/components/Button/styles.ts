@@ -11,6 +11,7 @@ const wrapperModifiers = {
   small: (theme: DefaultTheme) => css`
     height: 3rem;
     font-size: ${theme.font.sizes.xsmall};
+    padding: ${theme.spacings.xxsmall} ${theme.spacings.xxsmall};
   `,
   medium: (theme: DefaultTheme) => css`
     height: 4rem;
@@ -29,6 +30,7 @@ const wrapperModifiers = {
 }
 
 export const Wrapper = styled.button<WrapperProps>`
+  cursor: pointer;
   color: white;
   background-color: black;
   border: none;
@@ -36,7 +38,7 @@ export const Wrapper = styled.button<WrapperProps>`
   display: flex;
   align-items: center;
   gap: 8px;
-  cursor: pointer;
+  justify-content: center;
 
   ${({ theme, size, fullWidth }) => css`
     ${!!size && wrapperModifiers[size](theme)}
