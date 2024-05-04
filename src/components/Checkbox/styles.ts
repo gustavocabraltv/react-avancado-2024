@@ -43,7 +43,7 @@ export const Input = styled.input`
       transition: ${theme.transition.fast};
     }
     &:focus {
-      box-shadow: 0 0 0.5rem ${theme.colors.primary};
+      box-shadow: 0 0 0.5rem ${theme.colors.gray};
     }
     &:checked {
       border-color: ${theme.colors.primary};
